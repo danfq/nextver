@@ -1,0 +1,50 @@
+{
+  "name": "@danfq/nextver",
+  "version": "1.0.0",
+  "description": "Compute the next semantic version and grouped release notes from Conventional Commits, built for GitHub Actions.",
+  "type": "module",
+  "license": "MIT",
+  "author": "DanFQ",
+  "keywords": [
+    "release",
+    "semver",
+    "conventional-commits",
+    "changelog",
+    "release-notes",
+    "github-actions",
+    "version-bump"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "nextver": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18.3"
+  }
+}
