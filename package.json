@@ -5,6 +5,12 @@
   "type": "module",
   "license": "MIT",
   "author": "DanFQ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danfq/nextver.git"
+  },
+  "homepage": "https://github.com/danfq/nextver#readme",
+  "bugs": "https://github.com/danfq/nextver/issues",
   "keywords": [
     "release",
     "semver",
